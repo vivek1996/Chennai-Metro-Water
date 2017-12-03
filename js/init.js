@@ -4,6 +4,7 @@
     $('.sidenav').sidenav();
     $('.parallax').parallax();
       $('.dropdown-trigger').dropdown();
+      $('.tabs').tabs();
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 //$('.dropdown-trigger').dropdown();
