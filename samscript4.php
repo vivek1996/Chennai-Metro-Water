@@ -1,18 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "test";
-$hno=$_POST["hno"];
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
+include 'connection.php'
 // sql to delete a record
-$sql = "DELETE FROM water WHERE hnumber=$hno";
+$delete_id=$_POST['hno'];
+$sql = "DELETE FROM water WHERE hnumber= $delete_id";
 
 if ($conn->query($sql) === TRUE) {
     $msg="Record deleted successfully!!";

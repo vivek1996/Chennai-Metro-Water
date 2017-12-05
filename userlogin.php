@@ -15,7 +15,7 @@ if(mysqli_num_rows($query_result)==0) {
         // check if password are equal
         if($row_query['password_field']==$_POST['password']){
             $_SESSION['password'] = $_POST['password'];
-            header("Location: home.html");
+            header("Location: cus.html");
             exit;
         } else{ // if not
             echo "Invalid Password";
@@ -26,7 +26,7 @@ if(mysqli_num_rows($query_result)==0) {
 if(empty($_SESSION)) // if the session not yet started
     session_start();
 if(!isset($_POST['submit'])) { // if the form not yet submitted
-    header("Location: admin.html");
+    header("Location: index.html");
     exit;
 }
 ?>

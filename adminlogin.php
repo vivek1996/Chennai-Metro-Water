@@ -13,9 +13,10 @@ if(isset($_POST['admin_login']))//this will tell us what to do if some data has 
     if(mysqli_num_rows($run_query)>0)
     {
 
-        echo "<script>window.open('view_users.php','_self')</script>";
+        echo "<script>window.open('admin.html','_self')</script>";
     }
-    else {echo"<script>alert('Admin Details are incorrect..!')</script>";}
+    else {
+        echo"<script>alert('Admin Details are incorrect..!')</script>";}
 
 }
 

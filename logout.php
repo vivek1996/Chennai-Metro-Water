@@ -1,7 +1,6 @@
 <?php
 
-session_start();
+session_start();//session is a way to store information (in variables) to be used across multiple pages.
 session_destroy();
-$home_url = 'index.html' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/index.php';
-header('Location: ' . $home_url);
+header("Location: index.html");
 ?>
