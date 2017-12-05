@@ -1,14 +1,9 @@
 <?php
 include 'connection.php';
 
-if(empty($_SESSION)) // if the session not yet started
-    session_start();
-if(!isset($_POST['submit'])) { // if the form not yet submitted
-    header("Location: index.html");
-    exit;
-}
+
 //check if the username entered is in the database.
-$test_query = "SELECT * FROM table_name WHERE username_field = '".$_POST[username]."'";
+$test_query = "SELECT * FROM userdb WHERE username_field = '".$_POST[username]."'";
 $query_result = mysqli_query($test_query);
 //conditions
 if(mysqli_num_rows($query_result)==0) {
@@ -24,7 +19,14 @@ if(mysqli_num_rows($query_result)==0) {
             exit;
         } else{ // if not
             echo "Invalid Password";
+        
         }
     }
+}
+if(empty($_SESSION)) // if the session not yet started
+    session_start();
+if(!isset($_POST['submit'])) { // if the form not yet submitted
+    header("Location: admin.html");
+    exit;
 }
 ?>
