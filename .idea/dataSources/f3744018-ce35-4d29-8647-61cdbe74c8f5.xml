@@ -957,46 +957,61 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="241" parent="6" name="water">
+    <table id="241" parent="6" name="admin">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="242" parent="241" name="hnumber">
+    <table id="242" parent="6" name="water">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="243" parent="241" name="admin_name">
       <Position>1</Position>
-      <DataType>int(5)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="241" name="oname">
+    <column id="244" parent="241" name="admin_pass">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="241" name="iniread">
+    <column id="245" parent="242" name="hnumber">
+      <Position>1</Position>
+      <DataType>int(5)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="246" parent="242" name="oname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="242" name="iniread">
       <Position>3</Position>
       <DataType>int(5)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="241" name="endread">
+    <column id="248" parent="242" name="endread">
       <Position>4</Position>
       <DataType>int(5)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="241" name="totcons">
+    <column id="249" parent="242" name="totcons">
       <Position>5</Position>
       <DataType>int(5)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="241" name="curcost">
+    <column id="250" parent="242" name="curcost">
       <Position>6</Position>
       <DataType>int(5)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="248" parent="241" name="PRIMARY">
+    <key id="251" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>hnumber</ColNames>
       <Primary>1</Primary>

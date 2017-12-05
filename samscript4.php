@@ -1,8 +1,8 @@
 <?php
-include 'connection.php'
+include 'connection.php';
 // sql to delete a record
 $delete_id=$_POST['hno'];
-$sql = "DELETE FROM water WHERE hnumber= $delete_id";
+$sql = "DELETE FROM water WHERE hnumber= '$delete_id'";
 
 if ($conn->query($sql) === TRUE) {
     $msg="Record deleted successfully!!";
