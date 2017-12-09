@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <style>
+ 
+    
+    
+    </style>
 </head>
 <body>
 <nav class="white" role="navigation">
@@ -20,20 +25,20 @@
             <li><a href="admin.html"><i class="material-icons">arrow_back</i></a></li>
            <li></li>
         </ul>
-
+        <div id="bck"><a href="admin.html">Back</a></div>
         <ul id="nav-mobile" class="sidenav">
             <li><a href="logout.php">Logout</a></li>
-
+            
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 
-<h4 class="center blue-text">Add Your Details</h4>
+<h4 class="center blue-text">Update Your Details</h4>
 
     
 <div id="up" class="col s12 center">
-  <form action="samscript.php" method="post">
+  <form action="updateele.php" method="post">
       <div class="col s12 l4">
             <input type="text" name="hno" placeholder="House Number">
           <input type="text" name="owe" placeholder="House owner name">
@@ -44,9 +49,8 @@
             <input type="submit" class="btn" name="test"></div>
         </form>
     </div>
-
-<?php
-include 'connection.php';
+    <?php
+    include 'connection.php';
     if (isset($_POST["test"]))
     {
 $a=isset($_POST["hno"])?$_POST["hno"]:false;
@@ -55,29 +59,26 @@ $c=isset($_POST["ini"])?$_POST["ini"]:false;
     $d=isset($_POST["end"])?$_POST["end"]:false;
         $e=isset($_POST["tot"])?$_POST["tot"]:false;
         $f=isset($_POST["cur"])?$_POST["cur"]:false;
-
-$sql = "INSERT INTO water values($a,'$b',$c,$d,$e,$f)";
-/*
-if ($conn->query($sql) === TRUE) {
-    
-    echo "New record created successfully";
-    
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+        if($a==TRUE && $b==TRUE && $c==TRUE && $d==TRUE && $e==TRUE && $f==TRUE)
+        {
+            mysqli_query($conn,"UPDATE water SET hnumber=$a,oname='$b',iniread=$c,endread=$d,totcons=$e,curcost=$f WHERE hnumber=$a");
+$aff= mysqli_affected_rows($conn);
+if($aff>0)
+{
+    echo "<center>Update successfull<center>";
 }
-*/
-if (mysqli_query($conn, $sql)) {
-   print "<center>New Record Created Successfully</center>";
- 
-    /*
-    header("Location: admin.html");
-    */
-} else {
-    echo "<center>Enter Data Correctly</center>";
+else if($aff==0)
+    echo "<center>Entered data not found<center>";
 }
-
-mysqli_close($conn);
+else
+    echo "<center>Enter the data correctly<center>";
+$conn->close();
     }
-?>
-    </body>
+    ?>
+    
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+</body>
 </html>
+

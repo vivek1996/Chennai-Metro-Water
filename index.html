@@ -17,15 +17,16 @@
 
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="index.html" class="brand-logo indigo-text text-darken-2 "><img src="images/logo.jpg" height="50px " width="50px"><span class="hide-on-med-and-down">Chennai Metro Water</span> </a>
+      <a id="logo-container" href="index.html" class="brand-logo indigo-text text-darken-2 "><img src="images/logo.jpg" height="50px " width="50px"><span class="right hide-on-med-and-down">Chennai Metro Water</span> </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Contact US </a></li>
+        <li><a href="#contact">Contact US </a></li>
           <li> <a class='dropdown-trigger' href="#" data-target='dropdown1'>Online Services</a></li>
           <li ><a href="#admin">Admin</a> </li>
+          <li><a href="#reg">Register</a></li>
       </ul>
         <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="#!">Apply For New Connection</a></li>
-            <li><a href="#!">Application Status</a></li>
+            <li><a href="#">Apply For New Connection</a></li>
+            <li><a href="#">Application Status</a></li>
             <li><a href="#">Tax Calculator</a> </li>
         </ul>
       <ul id="nav-mobile" class="sidenav">
@@ -51,7 +52,7 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="images/how-to-save-water1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="images/5-ways-to-save-water.jpg" alt="Unsplashed background img 1"></div>
   </div>
   <div class="container center" id="login">
     <div class="section ">
@@ -60,18 +61,18 @@
       <div class="row  ">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons ">edit</i></h2>
-            <h5 class="center">Login</h5>
+            <h5 class="center">User Login</h5>
               <div class="row">
                   <form class="col s12" method="post" action="userlogin.php">
                       <div class="row">
                           <div class="input-field col s12 m10 l6">
                               <i class="material-icons prefix " style="font-size: 2rem">account_circle</i>
-                              <input id="icon_prefix" type="text" class="validate">
+                              <input id="icon_prefix" type="text" name="user_name" class="validate">
                               <label for="icon_prefix">User Name</label>
                           </div>
                           <div class="input-field col s12 m10 l6">
                               <i class="material-icons prefix" style="font-size: 2rem">lock</i>
-                              <input id="icon_telephone" type="password" class="validate">
+                              <input id="icon_telephone" type="password" name="user_pass" class="validate">
                               <label for="icon_telephone">Password</label>
                           </div>
                       </div>
@@ -89,7 +90,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 darken-4 blue-text text-darken-4">Save Water , Save Future</h5>
+          <h5 class="header col s12 darken-4 white-text text-darken-4">Save Water , Save Future</h5>
         </div>
       </div>
     </div>
@@ -133,40 +134,84 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12  blue-text text-darken-4">Spread Green</h5>
+          <h5 class="header col s12  green-text text-darken-4">Spread Green</h5>
         </div>
       </div>
     </div>
     <div class="parallax"><img src="images/Crise-hidrica.jpg" alt="Unsplashed background img 3"></div>
   </div>
+    <div class="container">
+    <div class="section">
+
+      <div class="row" id="reg">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Register</h4>
+            <div class="row">
+                <form class="col s12"  action="#" method="post">
+                    <div class="row">
+                        <div class="input-field col s12 m10 l6">
+                            <i class="material-icons prefix " style="font-size: 2rem">perm_identity</i>
+                            <input id="icon_prefix" type="text" name="admin_name" class="validate">
+                            <label for="icon_prefix">User Name</label>
+                        </div>
+                        <div class="input-field col s12 m10 l6">
+                            <i class="material-icons prefix" style="font-size: 2rem">mail</i>
+                            <input id="icon_prefix" type="text" name="admin_pass" class="validate">
+                            <label for="icon_telephone">Email</label>
+                        </div>
+                         <div class="input-field col s12 m10 l6">
+                            <i class="material-icons prefix" style="font-size: 2rem">lock</i>
+                            <input id="icon_telephone" type="password" name="admin_pass" class="validate">
+                            <label for="icon_telephone">Password</label>
+                        </div>
+                         <div class="input-field col s12 m10 l6">
+                            <i class="material-icons prefix" style="font-size: 2rem">lock</i>
+                            <input id="icon_telephone" type="password" name="admin_pass" class="validate">
+                            <label for="icon_telephone">Retype Password</label>
+                        </div>
+                    </div>
+                    <center>Your Email-id will be your username</center><br>
+                    <button class="btn waves-effect waves-red blue" type="submit" name="admin_login">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12  blue-text text-darken-4">It takes a lot of blue to stay green</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/how-to-save-water1.jpg" alt="Unsplashed background img 3"></div>
+  </div>
 
   <footer class="page-footer blue">
     <div class="container">
-      <div class="row">
+      <div class="row" id="contact">
         <div class="col l6 s12">
           <h5 class="white-text">Chennai Metro Water</h5>
           <p >Chennai Metropolitan Water Supply and Sewerage Board (CMWSSB) in Tamilnadu, has formulated a set of service standards, good quality chennai metro water supply, chennai rainwater harvesting, chennai online water complaints, responsible tax collections, treatment and disposal of wastewater.</p>
 
 
         </div>
-        <div class="col m6 l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col m6 l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
+          <div class="col m6 l3 s12">
+          <h5 class="white-text">Contact:</h5>
+              <ul>
+              <li>Ten stars</li>
+              <li>K.S.R.C.T</li>
+              <li>Tiruchengode</li>
+              <li>Namakkal(Dt)</li>
+              </ul>
+          
+          </div>
       </div>
     </div>
     <div class="footer-copyright">

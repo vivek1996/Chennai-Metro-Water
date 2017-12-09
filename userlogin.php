@@ -1,32 +1,32 @@
 <?php
-include 'connection.php';
-
-
-//check if the username entered is in the database.
-$test_query = "SELECT * FROM userdb WHERE username_field = '".$_POST[username]."'";
-$query_result = mysqli_query($test_query);
-//conditions
-if(mysqli_num_rows($query_result)==0) {
-//if username entered not yet exists
-    echo "The username you entered is invalid.";
-}else {
-//if exists, then extract the password.
-    while($row_query = mysqli_fetch_array($query_result)) {
-        // check if password are equal
-        if($row_query['password_field']==$_POST['password']){
-            $_SESSION['password'] = $_POST['password'];
-            header("Location: cus.html");
-            exit;
-        } else{ // if not
-            echo "Invalid Password";
-        
-        }
-    }
-}
-if(empty($_SESSION)) // if the session not yet started
-    session_start();
-if(!isset($_POST['submit'])) { // if the form not yet submitted
-    header("Location: index.html");
-    exit;
+session_start();
+if(isset($_POST['action']))
+{
+ mysql_connect('localhost','root','') or die(mysql_error());
+ mysql_select_db('test') or die(mysql_error());
+ $name=$_POST['user_name'];
+ $pwd=$_POST['user_pass'];
+ if($name!=''&&$pwd!='')
+ {
+   $query=mysql_query("select * from login1 where username='".$name."' and password='".$pwd."'") or die(mysql_error());
+   $res=mysql_fetch_row($query);
+   if($res)
+   {
+    header('location:view.php');
+   }
+   else
+   {
+       $msg="You entered username or password is incorrect";
+     echo "<script type='text/javascript'>alert('$msg');
+    </script>";
+       header('location:index.html');
+   }
+ }
+ else
+ {
+    $msg1="Enter both username and password";
+ echo "<script type='text/javascript'>alert('$msg1');</script>";
+     header('location:index.html');
+ }
 }
 ?>

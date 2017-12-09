@@ -1,3 +1,4 @@
+
 <?php
 /*
 $servername = "localhost";
@@ -20,8 +21,9 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         $res1=$row["hnumber"];
+        $res2=$row["oname"];
 
-    print "<h2>" .$res1. "</h2>";
+    print "<div>" .$res1. "<br>" .$res2. "</div>";
     }
 } else {
     echo "0 results";
