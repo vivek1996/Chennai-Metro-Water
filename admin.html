@@ -10,43 +10,54 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <style>
+     <style>
     #test1 {
 	position: absolute;
-        left: 350px;
-        top:350px;
+        left: 585px;
+        top:300px;
 }
     #test2 {
 	position: absolute;
-    left: 620px;
+    left: 585px;
         top:180px;
 }
         #test3 {
 	position: absolute;
-            left: 620px;
-            top:580px;
+            left: 585px;
+            top:540px;
 }
         #test4 {
 	position: absolute;
-            left:870px;
-            top: 350px;
+            left:585px;
+            top: 420px;
+}  
+         #test5 
+             {
+               position: absolute;
+                top:250px;
+                 left: 160px;
+             }
+         #test6 {
+             position: absolute;
+             top:150px;
+             left: 160px;
 }
- #image {
-	position: absolute;
-     width: 25%;
-     height: 50%;
-     left: 500px;
-     top:230px;
-}   
-    
-    
-    
+         #test7{
+             position: absolute;
+             top:450px;
+             left: 160px;
+         }
+         #test8{
+             position: absolute;
+             top:350px;
+             left: 160px;
+         }
     </style>
 </head>
 <body>
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="index.html" class="brand-logo indigo-text text-darken-2 "><img src="images/logo.jpg" height="50px " width="50px"><span class="hide-on-med-and-down">Chennai Metro Water</span> </a>
+        <a id="logo-container" href="index.php" class="brand-logo indigo-text text-darken-2 "><img src="images/logo.jpg" height="50px " width="50px"><span class="hide-on-med-and-down">Chennai Metro Water</span> </a>
         <ul class="right hide-on-med-and-down">
             <li><a href="logout.php">Log Out</a></li>
            <li></li>
@@ -61,28 +72,60 @@
 </nav>
 
 <h4 class="center blue-text">Admin Control Panel</h4>
-
+<div class="hide-on-small-only">
+    
 <div id="test1">
   <form action="updateele.php" method="post">
-  <input type="submit" class="btn" value="Update">
+       <a class="btn-floating btn-medium blue"><i class="large material-icons">mode_edit</i></a>
+       <input type="submit" class="btn" value="Update Customer Details">
   </form>
 </div>
 <div id="test2">
   <form action="samscript.php" method="post">
-  <input type="submit" class="btn" value="Add">
+       <a class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">add</i></a>
+       <input type="submit" class="btn" value="Add Customers">
   </form>
 </div>
 <div id="test3">
   <form action="view.php" method="post">
-  <input type="submit" class="btn" value="View">
+       <a class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">remove_red_eye</i></a>
+       <input type="submit" class="btn" value="View Customer Details">
   </form>
 </div>
 <div id="test4">
   <form action="samscript4.php" method="post">
-  <input type="submit" class="btn" value="Delete">
+       <a class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">delete</i></a>
+       <input type="submit" class="btn" value="Delete Customer">
   </form>
 </div>
-    <img src="images/savewater.png" id="image" alt="drop">
+    </div>
+    <div class="hide-on-large-only">
+<div id="test5">
+  <form action="updateele.php" method="post">
+       <a class="btn-floating btn-medium blue"><i class="large material-icons">mode_edit</i></a>
+       <input type="submit" class="btn" value="Update Customer Details">
+  </form>
+</div>
+<div id="test6">
+  <form action="samscript.php" method="post">
+       <a class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">add</i></a>
+       <input type="submit" class="btn" value="Add Customers">
+  </form>
+</div>
+<div id="test7">
+  <form action="view.php" method="post">
+       <a class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">remove_red_eye</i></a>
+       <input type="submit" class="btn" value="View Customer Details">
+  </form>
+</div>
+<div id="test8">
+  <form action="samscript4.php" method="post">
+       <a class="btn-floating btn-medium waves-effect waves-light blue"><i class="material-icons">delete</i></a>
+       <input type="submit" class="btn" value="Delete Customer">
+  </form>
+</div>
+    </div>
+
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>

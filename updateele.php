@@ -12,43 +12,68 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <style>
  
-    
-    
+     #Move
+        {
+            position: absolute;
+            left: -150px;
+        }
     </style>
 </head>
 <body>
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="index.html" class="brand-logo indigo-text text-darken-2 "><img src="images/logo.jpg" height="50px " width="50px"><span class="hide-on-med-and-down">Chennai Metro Water</span> </a>
+        <a id="logo-container" href="index.php" class="brand-logo indigo-text text-darken-2 "><img src="images/logo.jpg" height="50px " width="50px"><span class="hide-on-med-and-down">Chennai Metro Water</span> </a>
         <ul class="right hide-on-med-and-down">
             <li><a href="logout.php">Log Out</a></li>
-            <li><a href="admin.html"><i class="material-icons">arrow_back</i></a></li>
+            <li><a href="admin.html" id="Move"><i class="material-icons">arrow_back</i></a></li>
            <li></li>
         </ul>
         <div id="bck"><a href="admin.html">Back</a></div>
         <ul id="nav-mobile" class="sidenav">
             <li><a href="logout.php">Logout</a></li>
-            
+               <li><a href="admin.html">Back</a></li>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
-
-<h4 class="center blue-text">Update Your Details</h4>
-
     
-<div id="up" class="col s12 center">
-  <form action="updateele.php" method="post">
-      <div class="col s12 l4">
-            <input type="text" name="hno" placeholder="House Number">
-          <input type="text" name="owe" placeholder="House owner name">
-      <input type="text" name="ini" placeholder="Initial reading">
-      <input type="text" name="end" placeholder="Ending Number">
-      <input type="text" name="tot" placeholder="Total consumption">
-      <input type="text" name="cur" placeholder="Current Cost">
-            <input type="submit" class="btn" name="test"></div>
-        </form>
-    </div>
+<div class="center">
+<h4 class="center blue-text">Update Customer Details</h4>
+      <div class="row ">
+    <form class="col s12 l6 m6" action="updateele.php" method="post">
+      <div class="row">
+        
+        <div class="input-field col s12 l6 m6 ">
+          <input id="last_name" name="hno" type="number" class="validate">
+          <label for="last_name">House Number</label>
+        </div>
+      </div>
+      <div class="input-field col s12 l6 m6 ">
+          <input id="last_name" name="owe" type="text" class="validate">
+          <label for="last_name">Owner Name</label>
+        </div>
+		<div class="input-field col s12 l6 m6 ">
+          <input id="last_name" name="ini" type="number" class="validate">
+          <label for="last_name">Initial Reading(In litre)</label>
+        </div>
+		<div class="input-field col s12 l6 m6 ">
+          <input id="last_name" name="end" type="number" class="validate">
+          <label for="last_name">Ending Reading(In litre)</label>
+        </div>
+		<div class="input-field col s12 l6 m6 ">
+          <input id="last_name"  name="tot" type="number" class="validate">
+          <label for="last_name">Total Consumption</label>
+        </div>
+       <div class="input-field col s12 l6 m6 ">
+          <input id="last_name" name="cur" type="number" class="validate">
+          <label for="last_name">Current Cost</label>
+        </div>
+		<button class="btn waves-effect waves-red blue" type="submit" name="test">Submit
+                          <i class="material-icons right">send</i>
+         </button>
+    </form>
+  </div>
+      </div>  
     <?php
     include 'connection.php';
     if (isset($_POST["test"]))

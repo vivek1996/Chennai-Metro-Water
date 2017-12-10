@@ -19,14 +19,14 @@ if(isset($_POST['admin_login']))
    {
        $msg="You entered username or password are incorrect";
    echo "<script type='text/javascript'>alert('$msg');</script>";
-       header('location:index.html');
+       header('location:index.php');
    }
  }
  else
  {
      $msg1="Enter both Username and password";
 echo "<script type='text/javascript'>alert('$msg1');</script>";
-     header('location:index.html');
+     header('location:index.php');
  }
 }
 ?>
